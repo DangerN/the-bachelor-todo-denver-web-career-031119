@@ -46,8 +46,8 @@ def get_average_age_for_season(data, season)
   num_contestants = 0 
   total_age_contestants = 0
   data[season].each do  | contestant |
-    if contestant['status'] == 'Winner'
-      return contestant['name'].split(' ')[0]
-    end
+    total_age_contestants += contestant['age'].to_i
+    num_contestants += 1
   end
+  binding.pry
 end
