@@ -10,7 +10,10 @@ end
 def get_contestant_name(data, occupation)
   data.each do | season, contestants |
     contestants.each do | contestant |
-      binding.pry
+      #binding.pry
+      if contestant['occupation'] == occupation
+        return contestant['name']
+      end
     end
   end
 end
