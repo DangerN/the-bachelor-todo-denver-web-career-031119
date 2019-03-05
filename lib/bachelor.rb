@@ -19,14 +19,16 @@ def get_contestant_name(data, occupation)
 end
 
 def count_contestants_by_hometown(data, hometown)
+  from_town_count = 0
   data.each do | season, contestants |
     contestants.each do | contestant |
       #binding.pry
       if contestant['hometown'] == hometown
-        return contestant['name']
+        from_town_count ++
       end
     end
   end
+  from_town_count
 end
 
 def get_occupation(data, hometown)
