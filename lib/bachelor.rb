@@ -43,12 +43,13 @@ def get_occupation(data, hometown)
 end
 
 def get_average_age_for_season(data, season)
-  num_contestants = 0 .0
-  total_age_contestants = 0.0
-  average_age = 0.0
+  num_contestants = 0
+  total_age_contestants = 0
+  average_age = 0
   data[season].each do  | contestant |
-    total_age_contestants += contestant['age'].to_f
-    num_contestants += 1.0
+    total_age_contestants += contestant['age'].to_i
+    num_contestants += 1
   end
+  average_age = total_age_contestants / num_contestants
   binding.pry
 end
