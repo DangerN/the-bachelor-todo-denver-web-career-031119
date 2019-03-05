@@ -51,5 +51,8 @@ def get_average_age_for_season(data, season)
     num_contestants += 1
   end
   average_age = total_age_contestants / num_contestants
-  binding.pry
+  if ((total_age_contestants.to_f / num_contestants.to_f) - average_age.to_f) > 0.5
+    average_age += 1
+  end
+  #binding.pry
 end
