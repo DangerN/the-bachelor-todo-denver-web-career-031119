@@ -24,7 +24,7 @@ def count_contestants_by_hometown(data, hometown)
     contestants.each do | contestant |
       #binding.pry
       if contestant['hometown'] == hometown
-        from_town_count ++
+        from_town_count++
       end
     end
   end
